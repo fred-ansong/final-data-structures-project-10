@@ -13,6 +13,7 @@ public class HospitalApp {
     private final Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         new HospitalApp().run();
     }
 
@@ -31,6 +32,23 @@ public class HospitalApp {
         //   9) Performance demo (calls SampleWorkloads with sizes)
         //  10) Export log to CSV
         //   0) Exit
+        while true{
+            System.out.println("\n------Actions------");
+            System.out.println("1) Register patient");
+            System.out.println("2) Update patient");
+            System.out.println("3) Enqueue for triage (by id)");
+            System.out.println("4) Peek next");
+            System.out.println("5) Admit/treat next");
+            System.out.println("6) Print triage order");
+            System.out.println("7) Find patient by id");
+            System.out.println("8) Show treatment log");
+            System.out.println("9) Performance demo");
+            System.out.println("10) Export log to CSV");
+            System.out.println("0) Exit");
+
+            int option = scanner.nextInt();
+            switch (choice) {
+                    
     }
 
     // TODO: helper methods per menu action
