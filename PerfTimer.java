@@ -1,5 +1,6 @@
 package edu.hcu.triage;
 
+
 /** Tiny helper for timing blocks. */
 public final class PerfTimer implements AutoCloseable {
     private final String label;
@@ -13,5 +14,12 @@ public final class PerfTimer implements AutoCloseable {
     @Override public void close() {
         long ns = System.nanoTime() - start;
         // TODO: print label + elapsed millis with reasonable formatting
+        public void close() {
+            long ns = System.nanoTime() - start;
+            double ms = ns / 1_000_000.0;
+
+            System.out.printf("[%s] finished in %.3f ms%n", label, ms);
+        }
     }
 }
+
